@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/footer/Footer";
+import classNames from "classnames";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MAXTV Live - Home",
-  description: "MAXTV Live - Home",
+  title: "MaxTV Live - Home",
+  description: "MaxTV Live - Home",
 };
 
 export default function RootLayout({
@@ -16,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={classNames(
+          montserrat.className,
+          "bg-secondary-foreground text-secondary"
+        )}
+      >
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

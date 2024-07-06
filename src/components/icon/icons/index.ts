@@ -1,0 +1,17 @@
+export { LogoIcon } from "./LogoIcon";
+export { RightArrowIcon } from "./RightArrowIcon";
+export { NetflixIcon } from "./NetflixIcon";
+export { SettingsIcon } from "./SettingsIcon";
+export { ArrowIcon } from "./ArrowIcon";
+export { ChevronIcon } from "./ChevronIcon";
+export { CloseIcon } from "./CloseIcon";
+export { MenuIcon } from "./MenuIcon";
+export { BestToolsAndTechIcon } from "./BestToolsAndTechIcon";
+export { BestWaysOfWorkingIcon } from "./BestWaysOfWorkingIcon";
+export { PhoneIcon } from "./PhoneIcon";
+export { EmailIcon } from "./EmailIcon";
+export { LocationIcon } from "./LocationIcon";
+export { CartIcon } from "./CartIcon";
+export { InstagramIcon } from "./InstagramIcon";
+export { TwitterIcon } from "./TwitterIcon";
+export { FacebookIcon } from "./FacebookIcon";
