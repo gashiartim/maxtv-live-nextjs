@@ -15,3 +15,4 @@ export { CartIcon } from "./CartIcon";
 export { InstagramIcon } from "./InstagramIcon";
 export { TwitterIcon } from "./TwitterIcon";
 export { FacebookIcon } from "./FacebookIcon";
+export { CheckCircleIcon } from "./CheckCircleIcon";

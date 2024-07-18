@@ -19,18 +19,13 @@ export const SOCIAL_LINKS: TSocialLink[] = [
     href: "https://www.instagram.com",
     icon: "instagram",
   },
-  {
-    name: "Twitter",
-    href: "https://www.twitter.com",
-    icon: "twitter",
-  },
 ];
 
 type SocialsProps = {};
 
 export const Socials: FC<SocialsProps> = () => {
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid grid-cols-2 gap-5">
       {SOCIAL_LINKS.map(({ name, href, icon }) => (
         <Link key={name} href={href}>
           <Icon type={icon} className="w-4 h-4" />

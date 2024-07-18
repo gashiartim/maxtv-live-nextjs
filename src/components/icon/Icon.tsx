@@ -17,6 +17,7 @@ import {
   SettingsIcon,
   TwitterIcon,
   NetflixIcon,
+  CheckCircleIcon,
 } from "./icons";
 
 export type IconType =
@@ -36,7 +37,8 @@ export type IconType =
   | "cart"
   | "facebook"
   | "instagram"
-  | "twitter";
+  | "twitter"
+  | "check-circle";
 
 const icons: Record<IconType, FC<Omit<IconProps, "type">>> = {
   logo: LogoIcon,
@@ -56,6 +58,7 @@ const icons: Record<IconType, FC<Omit<IconProps, "type">>> = {
   facebook: FacebookIcon,
   instagram: InstagramIcon,
   twitter: TwitterIcon,
+  "check-circle": CheckCircleIcon,
 };
 
 type IconProps = {

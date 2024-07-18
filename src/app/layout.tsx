@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import classNames from "classnames";
+import { Image } from "@/components";
+import bodyBgImage from "@/assets/home/offers-background.jpg";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -26,7 +28,14 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main>{children}</main>
+        <main className="relative">
+          {children}
+          <Image
+            src={bodyBgImage}
+            alt="Bg Image"
+            wrapperClassName="!fixed inset-0 z-[-1]"
+          />
+        </main>
         <Footer />
       </body>
     </html>
