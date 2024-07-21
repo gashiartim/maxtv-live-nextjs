@@ -21,12 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={classNames(
-          montserrat.className,
-          "bg-secondary-foreground text-secondary"
-        )}
-      >
+      <body className={classNames(montserrat.className, "bg-white")}>
         <Header />
         <main className="relative">
           {children}

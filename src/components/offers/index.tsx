@@ -67,7 +67,7 @@ type OffersProps = {};
 
 export const Offers: FC<OffersProps> = () => {
   return (
-    <div className="w-full bg-blue-600/20 relative">
+    <div className="w-full bg-blue-600/20 relative text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-transparent z-[1]"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-[1]"></div>
 

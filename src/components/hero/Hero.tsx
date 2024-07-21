@@ -12,17 +12,22 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-type HeroItemProps = {};
+type HeroItemProps = {
+  imageSrc?: string;
+};
 
-export const HeroItem: FC<HeroItemProps> = () => {
+export const HeroItem: FC<HeroItemProps> = ({ imageSrc }) => {
   return (
     <div className="relative flex items-center justify-center w-full h-full min-h-screen">
       <div className="absolute inset-0 w-full h-full">
         <Image
           alt="Hero Banner Image"
-          src={heroBannerImg}
+          src={imageSrc ?? heroBannerImg}
           className="w-full h-full"
           wrapperClassName="w-full h-full"
+          blurDataURL={imageSrc}
+          width={1920}
+          height={1080}
         />
       </div>
       <div className="absolute inset-0 bg-black/20"></div>
@@ -67,9 +72,15 @@ export const HeroItem: FC<HeroItemProps> = () => {
 type HeroProps = {};
 
 export const Hero: FC<HeroProps> = () => {
+  const heroImageSrcs = [
+    "/champions-league-1.png",
+    "/action-movies-1.webp",
+    "/music-1.webp",
+  ];
+
   return (
     <Carousel
-      className="w-full h-full relative"
+      className="w-full h-full relative text-white"
       opts={{ loop: true }}
       plugins={[
         Autoplay({
@@ -78,15 +89,11 @@ export const Hero: FC<HeroProps> = () => {
       ]}
     >
       <CarouselContent>
-        <CarouselItem className="w-full">
-          <HeroItem />
-        </CarouselItem>
-        <CarouselItem>
-          <HeroItem />
-        </CarouselItem>
-        <CarouselItem>
-          <HeroItem />
-        </CarouselItem>
+        {heroImageSrcs.map((src, index) => (
+          <CarouselItem key={`hero-banner-img-${index}`}>
+            <HeroItem imageSrc={src} />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <div className="absolute z-10 top-0 w-full inset-0 container 2xl:max-w-[90%] flex items-center justify-between">
         <CarouselPrevious className="static bg-transparent hover:bg-primary hover:border-primary hover:text-white w-14 h-14" />
